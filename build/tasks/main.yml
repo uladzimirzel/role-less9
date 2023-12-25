@@ -5,12 +5,7 @@
   with_items:
     - git
     - openjdk-11-jdk
-
-- name: install maven
-  apt: 
-    name: maven
-    state: present
-
+    - maven
 - name: git clone repository
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git

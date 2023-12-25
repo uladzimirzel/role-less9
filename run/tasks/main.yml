@@ -1,2 +1,18 @@
 ---
 # tasks file for run
+- name: install-tomcat
+  apt:
+    name: tomcat9
+    state: present
+
+    - name: sync-war-file
+      synchronize:
+        src: /usr/app/boxfuse-sample-java-war-hello/target/hello-1.0.war
+        dest: /var/lib/tomcat9/webapps
+        mode: push
+      delegate_to: 34.118.83.252
+
+    - name: start-tomcat
+      systemd:
+        name: tomcat9
+        state: started

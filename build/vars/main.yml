@@ -1,2 +1,4 @@
 ---
 # vars file for build
+git_repository: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+dest_folder: /usr/app/boxfuse-sample-java-war-hello

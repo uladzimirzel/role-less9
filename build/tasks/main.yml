@@ -1,8 +1,7 @@
 ---
 # tasks file for build
 - name: install packages
-  become: yes
-  apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
+  apt: name={{ item }}
   with_items:
     - git
     - openjdk-11-jdk
@@ -10,10 +9,10 @@
 
 - name: git clone repository
   git:
-    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-    dest: /usr/app/boxfuse-sample-java-war-hello
+    repo: {{  git_repository }}
+    dest: {{ dest_folder }}
 
 - name: maven build
   shell:
-    chdir: /usr/app/boxfuse-sample-java-war-hello
+    chdir: {{ dest_folder }}
     cmd: mvn package

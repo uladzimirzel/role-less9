@@ -1,10 +1,10 @@
 ---
-- name: build conf
+- name: "build conf"
   hosts: build
   become: yes
   roles: build
 
-- name: run conf
+- name: "run conf"
   hosts: run
   become: yes
   roles: run

@@ -1,11 +1,10 @@
 ---
 # tasks file for run
-
 - name: install packages
   become: yes
   apt: pkg={{ item }} state=present
   with_items:
-    - tomcat9
+    - tomcat
 
 - name: sync-war-file
   synchronize:
@@ -16,5 +15,5 @@
 
 - name: start-tomcat
   systemd:
-    name: tomcat9
+    name: tomcat
     state: started

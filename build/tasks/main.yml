@@ -6,7 +6,7 @@
       - maven
       - git
       - openjdk-11-jdk
-  state: present
+    state: present
 
 - name: git clone repository
   git:

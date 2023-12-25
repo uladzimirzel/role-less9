@@ -1,11 +1,12 @@
 ---
 # tasks file for build
 - name: install packages
-  apt: name={{item}} state=present
+  apt: name={{item}} state=latest
   with_items:
     - git
     - openjdk-11-jdk
     - maven
+    
 - name: git clone repository
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git

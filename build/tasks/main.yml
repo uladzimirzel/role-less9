@@ -1,11 +1,12 @@
 ---
 # tasks file for build
 - name: install packages
-  apt: name={{item}} state=installed
+  apt: name={{ item }} state=installed
   with_items:
     - maven
     - git
     - openjdk-11-jdk
+
 
 - name: git clone repository
   git:

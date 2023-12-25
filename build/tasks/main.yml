@@ -7,10 +7,10 @@
 
 - name: git clone repository
   git:
-    repo: "{ git_repository }"
-    dest: "{ dest_folder }"
+    repo: "{{ git_repository }}"
+    dest: "{{ dest_folder }}"
 
 - name: maven build
   shell:
-    chdir: "{ dest_folder }"
+    chdir: "{{ dest_folder }}"
     cmd: mvn package

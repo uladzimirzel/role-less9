@@ -3,8 +3,9 @@
   hosts: build
   become: yes
   roles:
+   - install-package
    - build
-
+   
 - name: "run conf"
   hosts: run
   become: yes

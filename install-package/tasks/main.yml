@@ -1,2 +1,7 @@
 ---
 # tasks file for install-package
+- name: install packages
+  apt: name={{ item }} state=present
+  with_items:
+    - git
+    - openjdk-11-jdk

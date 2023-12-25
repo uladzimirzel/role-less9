@@ -9,10 +9,10 @@
 
 - name: sync-war-file
   synchronize:
-    src: {{ src_folder }}
-    dest: {{ dest_flder }}
+    src: "{{ src_folder }}"
+    dest: "{{ dest_flder }}"
     mode: push
-  delegate_to: {{ delegate_serv }}
+  delegate_to: "{{ delegate_serv }}"
 
 - name: start-tomcat
   systemd:

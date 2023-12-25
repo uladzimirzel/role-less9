@@ -3,10 +3,10 @@
 - name: install packages
   apt:
     name:
-      - maven:latest
+      - maven
       - git
       - openjdk-11-jdk
-  state: installed
+  state: present
 
 - name: git clone repository
   git:

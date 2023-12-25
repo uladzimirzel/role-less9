@@ -1,3 +1,4 @@
+---
 - name: build conf
   hosts: build
   become: yes

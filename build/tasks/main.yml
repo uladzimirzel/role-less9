@@ -3,10 +3,12 @@
 - name: install packages
   apt: name={{item}} state=present
   with_items:
-    - maven
     - git
     - openjdk-11-jdk
 
+- name: install maven
+  apt: 
+    name: maven
 
 - name: git clone repository
   git:

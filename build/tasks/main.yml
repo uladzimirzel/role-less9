@@ -1,12 +1,12 @@
 ---
 # tasks file for build
 - name: install packages
-  apt:
-    name:
-      - maven
-      - git
-      - openjdk-11-jdk
-    state: present
+      apt:
+        name:
+          - git
+          - maven
+          - openjdk-11-jdk
+        state: present
 
 - name: git clone repository
   git:

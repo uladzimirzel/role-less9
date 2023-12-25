@@ -9,6 +9,7 @@
 - name: install maven
   apt: 
     name: maven
+    state: present
 
 - name: git clone repository
   git:

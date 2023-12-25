@@ -1,12 +1,12 @@
 ---
 # tasks file for build
 - name: install packages
-  apt:
-    name:
-      - git
-      - maven
-      - openjdk-11-jdk
-    state: present
+  become: yes
+  apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
+  with_items:
+    - git
+    - openjdk-11-jdk
+    - maven
 
 - name: git clone repository
   git:

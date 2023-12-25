@@ -2,4 +2,4 @@
 # vars file for run
 src_folder: /usr/app/boxfuse-sample-java-war-hello/target/hello-1.0.war
 dest_flder: /var/lib/tomcat9/webapps
-delegate_serv: 34.118.83.252
+delegate_serv: 34.118.16.228

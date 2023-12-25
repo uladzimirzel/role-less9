@@ -8,9 +8,9 @@
         - openjdk-11-jdk
 
 - name: git clone repository
-    git:
-      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-      dest: /usr/app/boxfuse-sample-java-war-hello
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+    dest: /usr/app/boxfuse-sample-java-war-hello
 
 - name: maven build
   shell:
